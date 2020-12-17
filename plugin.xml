@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-device" version="0.2.3">
+    <name>Device</name>
+    <description>Cordova Custom Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,device</keywords>
+    <js-module src="www/device.js" name="device">
+        <clobbers target="device" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CustomPlugin">
+                <param name="android-package" value="com.custom.cordova.plugin"/>
+            </feature>
+        </config-file>
+        <framework src="com.android.support:appcompat-v7:+" />
+        <framework src="com.android.support:design:+" />
+         <edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:name='MainActivity']" mode="merge">
+            <activity android:name="MainActivity" android:theme="@style/Theme.AppCompat.NoActionBar" />
+        </edit-config>
+        <framework src="src/android/build-extra.gradle" custom="true" type="gradleReference" />
+        <!-- <source-file src="src/android/UpdatePlugin.java" target-dir="src/com/mrspark/cordova/plugin" /> -->
+    </platform>
+</plugin>
