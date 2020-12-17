@@ -1,0 +1,34 @@
+{
+    "name": "cordova-custom-plugin",
+    "version": "1.0.3",
+    "description": "An Android Cordova plugin that allows users to update app to letest version without leaving the application",
+    "cordova": {
+        "id": "cordova-custom-plugin",
+        "platforms": [
+            "android"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/souvikbrahma/cordova-custom-plugin.git"
+    },
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "ecosystem:cordova",
+        "cordova-android",
+        "cordova",
+        "android",
+        "playstore",
+        "update",
+        "autoupdate",
+        "In app update",
+        "Stalness days",
+        "Priority update",
+        "Flexible update",
+        "Immidiate update"
+    ],
+    "license": "MIT"
+}
